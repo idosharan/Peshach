@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הַגָּדָה שֶׁל פֶּסַח — לֵיל סֵדֶר מִשְׁפַּחְתִּי</title>
+<style>
+/* ===== CSS VARIABLES & RESET ===== */
+:root {
+  --gold: #C6952B;
+  --gold-light: #F2D675;
+  --royal-blue: #1B3A6B;
+  --sky-blue: #5BA4CF;
+  --sky-blue-light: #B6DCF5;
+  --cream: #FFF8EE;
+  --cream-dark: #F5EDDA;
+  --burgundy: #7B2D3B;
+  --burgundy-light: #A94058;
+  --spring-green: #5DAA68;
+  --spring-green-light: #B5E2BB;
+  --white: #FFFFFF;
+  --text-dark: #2B1D0E;
+  --text-medium: #5A4632;
+  --shadow: rgba(43, 29, 14, 0.12);
+  --shadow-strong: rgba(43, 29, 14, 0.22);
+  --bg: var(--cream);
+  --bg-card: var(--white);
+  --bg-toolbar: rgba(255, 248, 238, 0.97);
+  --text-color: var(--text-dark);
+  --text-secondary: var(--text-medium);
+  --border-card: var(--gold-light);
+  --section-gradient: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+  --font-size-base: 22px;
+  --font-size-current: var(--font-size-base);
+  --line-height: 2;
+  --card-radius: 18px;
+  --transition: 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+html.dark-mode {
+  --bg: #1A1A2E;
+  --bg-card: #22223A;
+  --bg-toolbar: rgba(26, 26, 46, 0.97);
+  --text-color: #F0E6D3;
+  --text-secondary: #C4B8A8;
+  --border-card: #3D3456;
+  --shadow: rgba(0,0,0,0.3);
+  --shadow-strong: rgba(0,0,0,0.5);
+  --section-gradient: linear-gradient(135deg, #1A1A2E 0%, #22223A 100%);
+  --cream: #1A1A2E;
+  --cream-dark: #22223A;
+  --white: #22223A;
+  --gold: #F2D675;
+  --royal-blue: #7BA4D9;
+  --burgundy: #D4738A;
+  --spring-green: #7DCF8A;
+  --sky-blue: #7BC0E8;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'David Libre', 'Frank Ruhl Libre', 'Noto Serif Hebrew', 'David', 'Times New Roman', serif;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  background: var(--bg);
+  color: var(--text-color);
+  direction: rtl;
+  text-align: right;
+  transition: background var(--transition), color var(--transition);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+/* ===== TOOLBAR ===== */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-toolbar);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--gold-light);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: background var(--transition);
+}
+
+.toolbar-btn {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: #2B1D0E;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 6px var(--shadow);
+  min-height: 44px;
+  min-width: 44px;
+  justify-content: center;
+  font-weight: 600;
+}
+.toolbar-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px var(--shadow-strong);
+}
+.toolbar-btn:active { transform: translateY(0); }
+
+html.dark-mode .toolbar-btn {
+  background: linear-gradient(135deg, #3D3456 0%, #4A4068 100%);
+  color: #F0E6D3;
+}
+
+.toolbar-divider {
+  width: 2px;
+  height: 28px;
+  background: var(--gold-light);
+  border-radius: 2px;
+  margin: 0 4px;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+}
+
+/* ===== TITLE PAGE ===== */
+.title-page {
+  text-align: center;
+  padding: 60px 20px 50px;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 40%, var(--cream) 100%);
+  border-radius: var(--card-radius);
+  margin-bottom: 40px;
+  border: 3px solid var(--gold);
+  box-shadow: 0 8px 32px var(--shadow-strong);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1s ease-out;
+}
+
+.title-page::before,
+.title-page::after {
+  content: '✡';
+  position: absolute;
+  font-size: 120px;
+  opacity: 0.06;
+  color: var(--gold);
+}
+.title-page::before { top: -20px; right: -20px; }
+.title-page::after { bottom: -20px; left: -20px; }
+
+.title-page h1 {
+  font-size: 3.2em;
+  color: var(--burgundy);
+  text-shadow: 1px 1px 0 var(--gold-light);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.title-page .subtitle {
+  font-size: 1.3em;
+  color: var(--royal-blue);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.title-ornament {
+  display: block;
+  margin: 20px auto;
+  font-size: 2.2em;
+  color: var(--gold);
+  letter-spacing: 12px;
+}
+
+.title-page .year {
+  font-size: 1.1em;
+}
+
+.sponsor-box {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(198, 149, 43, 0.12) 0%, rgba(91, 164, 207, 0.10) 100%);
+  border: 2px dashed var(--gold);
+  border-radius: 14px;
+  display: inline-block;
+}
+.sponsor-box p {
+  font-size: 1.1em;
+  color: var(--royal-blue);
+  margin: 4px 0;
+}
+.sponsor-box strong {
+  color: var(--burgundy);
+  font-size: 1.15em;
+}
+.sponsor-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+.sponsor-links a {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: #2B1D0E;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1em;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 8px var(--shadow);
+  min-height: 44px;
+}
+.sponsor-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px var(--shadow-strong);
+}
+html.dark-mode .sponsor-links a {
+  background: linear-gradient(135deg, #3D3456 0%, #4A4068 100%);
+  color: #F0E6D3;
+}
+html.dark-mode .sponsor-box {
+  background: linear-gradient(135deg, rgba(242, 214, 117, 0.08) 0%, rgba(123, 192, 232, 0.06) 100%);
+  border-color: var(--gold);
+}
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
+
+/* ===== BLESSING BOX ===== */
+.blessing-box {
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF4DB 100%);
+  border: 2px solid var(--gold);
+  border-radius: var(--card-radius);
+  padding: 30px 36px;
+  margin: 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 16px var(--shadow);
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+html.dark-mode .blessing-box {
+  background: linear-gradient(135deg, #2A2A40 0%, #33304A 100%);
+}
+.blessing-box h2 {
+  color: var(--burgundy);
+  font-size: 1.6em;
+  margin-bottom: 14px;
+}
+.blessing-box p {
+  font-size: 1.15em;
+  line-height: 2.1;
+  color: var(--text-color);
+}
+
+/* ===== TABLE OF CONTENTS ===== */
+.toc {
+  background: var(--bg-card);
+  border: 2px solid var(--gold-light);
+  border-radius: var(--card-radius);
+  padding: 30px 36px;
+  margin: 30px 0;
+  box-shadow: 0 4px 16px var(--shadow);
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+.toc h2 {
+  text-align: center;
+  color: var(--royal-blue);
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  border-bottom: 2px dashed var(--gold-light);
+  padding-bottom: 12px;
+}
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+.toc-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--cream);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--royal-blue);
+  font-weight: 600;
+  font-size: 1em;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.toc-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+  background: var(--gold-light);
+  color: var(--text-dark);
+}
+.toc-link .toc-num {
+  background: var(--gold);
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82em;
+  flex-shrink: 0;
+}
+
+/* ===== SECTION CARDS ===== */
+.section-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-card);
+  border-radius: var(--card-radius);
+  padding: 36px 40px;
+  margin: 36px 0;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.section-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--burgundy) 100%);
+  border-radius: 0 var(--card-radius) var(--card-radius) 0;
+}
+.section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px var(--shadow-strong);
+}
+
+.section-card.highlight-blue::before {
+  background: linear-gradient(180deg, var(--sky-blue) 0%, var(--royal-blue) 100%);
+}
+.section-card.highlight-green::before {
+  background: linear-gradient(180deg, var(--spring-green-light) 0%, var(--spring-green) 100%);
+}
+.section-card.highlight-burgundy::before {
+  background: linear-gradient(180deg, var(--burgundy-light) 0%, var(--burgundy) 100%);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  border-bottom: 2px dashed var(--gold-light);
+  padding-bottom: 14px;
+}
+.section-icon {
+  font-size: 2em;
+  flex-shrink: 0;
+}
+.section-header h2 {
+  font-size: 1.8em;
+  color: var(--burgundy);
+  line-height: 1.3;
+}
+.section-header .section-transliteration {
+  font-size: 0.55em;
+  color: var(--text-secondary);
+  display: block;
+  font-weight: 400;
+}
+
+/* ===== HELPER NOTES ===== */
+.helper-note {
+  background: linear-gradient(135deg, #E8F7EA 0%, #D4EFDA 100%);
+  border: 1px solid var(--spring-green);
+  border-radius: 12px;
+  padding: 12px 18px;
+  margin: 16px 0;
+  font-size: 0.95em;
+  color: #2D5F30;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+html.dark-mode .helper-note {
+  background: linear-gradient(135deg, #1E3A2A 0%, #253D2E 100%);
+  color: #9FD8A8;
+  border-color: #3A6B42;
+}
+.helper-note .note-icon {
+  font-size: 1.5em;
+  flex-shrink: 0;
+}
+
+/* ===== TEXT STYLES ===== */
+.hagaddah-text {
+  font-size: 1.1em;
+  line-height: 2.2;
+  color: var(--text-color);
+  margin: 12px 0;
+}
+.hagaddah-text.large {
+  font-size: 1.3em;
+  line-height: 2.3;
+}
+.hagaddah-text.center { text-align: center; }
+
+.blessing {
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF4DB 100%);
+  border-right: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 24px;
+  margin: 16px 0;
+  font-size: 1.15em;
+}
+html.dark-mode .blessing {
+  background: linear-gradient(135deg, #2A2A40 0%, #33304A 100%);
+}
+
+.song-text {
+  text-align: center;
+  font-size: 1.15em;
+  line-height: 2.3;
+}
+.song-text .stanza {
+  margin: 16px 0;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--gold-light);
+}
+.song-text .stanza:last-child { border-bottom: none; }
+.song-text .refrain {
+  font-weight: 700;
+  color: var(--burgundy);
+  font-size: 1.15em;
+}
+
+.plague-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+  padding: 0;
+}
+.plague-list li {
+  background: linear-gradient(135deg, #FFF0F0 0%, #FFE0E0 100%);
+  border: 1px solid var(--burgundy-light);
+  border-radius: 12px;
+  padding: 12px 16px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: var(--burgundy);
+  transition: transform var(--transition);
+}
+html.dark-mode .plague-list li {
+  background: linear-gradient(135deg, #3A2232 0%, #4A2838 100%);
+}
+.plague-list li:hover { transform: scale(1.05); }
+
+.four-sons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.son-card {
+  background: var(--cream);
+  border: 2px solid var(--border-card);
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.son-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+.son-card .son-icon { font-size: 2.4em; margin-bottom: 8px; display: block; }
+.son-card h3 { color: var(--royal-blue); margin-bottom: 8px; font-size: 1.2em; }
+.son-card p { font-size: 0.95em; line-height: 1.9; }
+
+/* ===== ILLUSTRATION CARDS ===== */
+.illustration-card {
+  background: var(--bg-card);
+  border: 2px solid var(--gold-light);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  margin: 24px auto;
+  max-width: 520px;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.illustration-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px var(--shadow-strong);
+}
+.illustration-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, var(--cream-dark) 0%, var(--sky-blue-light) 50%, var(--gold-light) 100%);
+}
+.illustration-card .caption {
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 1em;
+  color: var(--text-secondary);
+  font-weight: 600;
+  border-top: 2px solid var(--gold-light);
+  background: var(--cream);
+}
+html.dark-mode .illustration-card .caption {
+  background: var(--bg-card);
+}
+
+/* ===== DAYENU BLOCK ===== */
+.dayenu-block {
+  text-align: center;
+  margin: 12px 0;
+  padding: 10px;
+}
+.dayenu-line {
+  margin: 6px 0;
+  font-size: 1.1em;
+}
+.dayenu-refrain {
+  font-size: 1.4em;
+  font-weight: 800;
+  color: var(--gold);
+  margin: 8px 0 16px;
+  text-shadow: 1px 1px 0 var(--shadow);
+}
+
+/* ===== ECHAD MI YODEA ===== */
+.echad-block {
+  margin: 12px 0;
+  padding: 16px 20px;
+  background: var(--cream);
+  border-radius: 12px;
+  border: 1px solid var(--border-card);
+  transition: background var(--transition);
+}
+.echad-block:nth-child(even) {
+  background: var(--cream-dark);
+}
+.echad-num {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: var(--gold);
+  display: block;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-top: 3px solid var(--gold);
+  color: var(--text-secondary);
+  font-size: 0.95em;
+}
+.footer .footer-ornament {
+  font-size: 2em;
+  color: var(--gold);
+  margin-bottom: 10px;
+  letter-spacing: 8px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: #2B1D0E;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px var(--shadow-strong);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition), opacity var(--transition);
+  z-index: 999;
+}
+.back-to-top.show { display: flex; }
+.back-to-top:hover { transform: scale(1.1); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .container { padding: 12px 14px 40px; }
+  .section-card { padding: 24px 20px; }
+  .title-page { padding: 40px 16px 36px; }
+  .title-page h1 { font-size: 2.2em; }
+  .toc-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .four-sons-grid { grid-template-columns: 1fr 1fr; }
+  .plague-list { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+  .toolbar { gap: 5px; padding: 8px 10px; }
+  .toolbar-btn { padding: 6px 10px; font-size: 16px; min-height: 40px; min-width: 40px; }
+  .illustration-card img { height: 200px; }
+}
+
+@media (max-width: 480px) {
+  .title-page h1 { font-size: 1.8em; }
+  .section-header h2 { font-size: 1.4em; }
+  .four-sons-grid { grid-template-columns: 1fr; }
+  .toc-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .toolbar, .back-to-top { display: none !important; }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 14pt;
+    line-height: 1.8;
+  }
+  .container { max-width: 100%; padding: 0; }
+  .section-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    margin: 16px 0;
+    page-break-inside: avoid;
+  }
+  .title-page {
+    page-break-after: always;
+    box-shadow: none;
+    border: 2px solid #C6952B;
+  }
+  .toc { page-break-after: always; }
+  .blessing-box { box-shadow: none; border: 1px solid #C6952B; }
+  .illustration-card {
+    box-shadow: none;
+    break-inside: avoid;
+    max-width: 400px;
+  }
+  .illustration-card img { height: 180px; }
+  .animate-on-scroll { opacity: 1 !important; transform: none !important; }
+  .helper-note { border: 1px solid #5DAA68; }
+  a { color: inherit; text-decoration: none; }
+  .section-card:hover { transform: none; box-shadow: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====== TOOLBAR ====== -->
+<nav class="toolbar" role="toolbar" aria-label="סרגל כלים">
+  <button class="toolbar-btn" onclick="changeFontSize(2)" title="הגדל גופן" aria-label="הגדל גופן">א+</button>
+  <button class="toolbar-btn" onclick="changeFontSize(-2)" title="הקטן גופן" aria-label="הקטן גופן">א−</button>
+  <button class="toolbar-btn" onclick="resetFontSize()" title="אפס גופן" aria-label="אפס גודל גופן">↻</button>
+  <span class="toolbar-divider"></span>
+  <button class="toolbar-btn" onclick="toggleDarkMode()" id="darkModeBtn" title="מצב כהה / בהיר" aria-label="החלף מצב תצוגה">🌙</button>
+</nav>
+
+<!-- ====== BACK TO TOP ====== -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0})" title="חזרה למעלה" aria-label="חזרה למעלה">▲</button>
+
+<div class="container">
+
+<!-- ====== TITLE PAGE ====== -->
+<header class="title-page" id="top">
+  <div class="title-ornament">🍷 ✡ 🍷</div>
+  <h1>הַגָּדָה שֶׁל פֶּסַח</h1>
+  <p class="subtitle">לֵיל סֵדֶר מִשְׁפַּחְתִּי, שָׂמֵחַ וְקָרִיא לְכָל הַגִּילָאִים</p>
+  <p class="year">תשפ״ו — 2026</p>
+  <div class="sponsor-box">
+    <p>🎮 בְּחָסוּת <strong>שָׁרָן גֵּיימְס</strong> 🎮</p>
+    <p class="sponsor-links">
+      <a href="https://www.youtube.com/@%D7%A9%D7%A8%D7%9F%D7%92%D7%99%D7%99%D7%9E%D7%A1" target="_blank" rel="noopener noreferrer">🎬 תִּרְשְׁמוּ לָעָרוּץ בְּיוּטְיוּבּ</a>
+      <a href="https://sites.google.com/view/sharangames/%D7%91%D7%99%D7%AA" target="_blank" rel="noopener noreferrer">🌐 הָאַתָר שֶׁל שָׁרָן גֵּיימְס</a>
+    </p>
+  </div>
+</header>
+
+<!-- ====== FAMILY BLESSING ====== -->
+<section class="blessing-box animate-on-scroll">
+  <h2>🕯️ בִּרְכַּת הַמִּשְׁפָּחָה 🕯️</h2>
+  <p>
+    יְהִי רָצוֹן מִלִּפְנֵי אָבִינוּ שֶׁבַּשָּׁמַיִם,<br>
+    שֶׁיִּשְׁרֶה שָׁלוֹם וְאַהֲבָה עַל בֵּיתֵנוּ הַלַּיְלָה,<br>
+    שֶׁנִּזְכֶּה לְסַפֵּר אֶת סִפּוּר יְצִיאַת מִצְרַיִם בְּשִׂמְחָה,<br>
+    וְשֶׁיִּהְיֶה לֵיל הַסֵּדֶר הַזֶּה מָלֵא חֹם, צְחוֹק, וְקֶשֶׁר מִשְׁפַּחְתִּי.<br>
+    <strong>חַג פֶּסַח שָׂמֵחַ לְכָל הַמִּשְׁפָּחָה! 🌸</strong>
+  </p>
+</section>
+
+<!-- ====== ILLUSTRATION: FAMILY SEDER ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/family-seder.jpg" alt="מִשְׁפָּחָה יוֹשֶׁבֶת סָבִיב שֻׁלְחַן הַסֵּדֶר">
+  <div class="caption">🕯️ מִשְׁפָּחָה בְּלֵיל הַסֵּדֶר 🕯️</div>
+</div>
+
+<!-- ====== TABLE OF CONTENTS ====== -->
+<nav class="toc animate-on-scroll" id="toc" aria-label="תוכן עניינים">
+  <h2>📜 סֵדֶר הַהַגָּדָה 📜</h2>
+  <div class="toc-grid">
+    <a class="toc-link" href="#kadesh"><span class="toc-num">1</span>קַדֵּשׁ</a>
+    <a class="toc-link" href="#urchatz"><span class="toc-num">2</span>וּרְחַץ</a>
+    <a class="toc-link" href="#karpas"><span class="toc-num">3</span>כַּרְפַּס</a>
+    <a class="toc-link" href="#yachatz"><span class="toc-num">4</span>יַחַץ</a>
+    <a class="toc-link" href="#magid"><span class="toc-num">5</span>מַגִּיד</a>
+    <a class="toc-link" href="#ma-nishtana"><span class="toc-num">6</span>מַה נִּשְׁתַּנָּה</a>
+    <a class="toc-link" href="#avadim"><span class="toc-num">7</span>עֲבָדִים הָיִינוּ</a>
+    <a class="toc-link" href="#arba-banim"><span class="toc-num">8</span>אַרְבָּעָה בָנִים</a>
+    <a class="toc-link" href="#eser-makot"><span class="toc-num">9</span>עֶשֶׂר הַמַּכּוֹת</a>
+    <a class="toc-link" href="#dayenu"><span class="toc-num">10</span>דַּיֵּנוּ</a>
+    <a class="toc-link" href="#rachtzah"><span class="toc-num">11</span>רָחְצָה</a>
+    <a class="toc-link" href="#motzi-matzah"><span class="toc-num">12</span>מוֹצִיא מַצָּה</a>
+    <a class="toc-link" href="#maror"><span class="toc-num">13</span>מָרוֹר</a>
+    <a class="toc-link" href="#korech"><span class="toc-num">14</span>כּוֹרֵךְ</a>
+    <a class="toc-link" href="#shulchan-orech"><span class="toc-num">15</span>שֻׁלְחָן עוֹרֵךְ</a>
+    <a class="toc-link" href="#tzafun"><span class="toc-num">16</span>צָפוּן</a>
+    <a class="toc-link" href="#barech"><span class="toc-num">17</span>בָּרֵךְ</a>
+    <a class="toc-link" href="#hallel"><span class="toc-num">18</span>הַלֵּל</a>
+    <a class="toc-link" href="#nirtzah"><span class="toc-num">19</span>נִרְצָה</a>
+    <a class="toc-link" href="#echad-mi-yodea"><span class="toc-num">🎵</span>אֶחָד מִי יוֹדֵעַ</a>
+  </div>
+</nav>
+
+<!-- ====== ILLUSTRATION: SEDER PLATE ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/seder-plate.jpg" alt="קְעָרַת הַסֵּדֶר עִם כָּל הַסִּמָנִים">
+  <div class="caption">🍽️ קְעָרַת הַסֵּדֶר 🍽️</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====== 1. KADESH ====== -->
+<!-- ===================================================== -->
+<section class="section-card animate-on-scroll" id="kadesh">
+  <div class="section-header">
+    <span class="section-icon">🍷</span>
+    <h2>קַדֵּשׁ <span class="section-transliteration">Kadesh — קִידּוּשׁ</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🫗</span>
+    <span>כָּאן אֶפְשָׁר לְהָרִים אֶת הַכּוֹס! כּוֹס רִאשׁוֹנָה 🍷</span>
+  </div>
+  <div class="blessing">
+    <p class="hagaddah-text large nikud-text">
+      בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּפֶן.
+    </p>
+  </div>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,
+      אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו.
+      וַתִּתֶּן לָנוּ יְיָ אֱלֹהֵינוּ בְּאַהֲבָה מוֹעֲדִים לְשִׂמְחָה,
+      חַגִּים וּזְמַנִּים לְשָׂשׂוֹן, אֶת יוֹם חַג הַמַּצּוֹת הַזֶּה,
+      זְמַן חֵרוּתֵנוּ, מִקְרָא קֹדֶשׁ, זֵכֶר לִיצִיאַת מִצְרָיִם.
+      כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים,
+      וּמוֹעֲדֵי קָדְשֶׁךָ בְּשִׂמְחָה וּבְשָׂשׂוֹן הִנְחַלְתָּנוּ.
+      בָּרוּךְ אַתָּה יְיָ, מְקַדֵּשׁ יִשְׂרָאֵל וְהַזְּמַנִּים.
+    </p>
+  </div>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה.
+    </p>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🥤</span>
+    <span>שׁוֹתִים אֶת הַכּוֹס הָרִאשׁוֹנָה בְּהַסָּבָה לִשְׂמֹאל!</span>
+  </div>
+</section>
+
+<!-- ====== ILLUSTRATION: FOUR CUPS ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/four-cups.jpg" alt="אַרְבַּע כּוֹסוֹת יַיִן עַל שֻׁלְחַן הַסֵּדֶר">
+  <div class="caption">🍷 אַרְבַּע כּוֹסוֹת 🍷</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====== 2. URCHATZ ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-blue animate-on-scroll" id="urchatz">
+  <div class="section-header">
+    <span class="section-icon">🫧</span>
+    <h2>וּרְחַץ <span class="section-transliteration">Urchatz — נְטִילַת יָדַיִם</span></h2>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    נוֹטְלִים יָדַיִם בְּלִי בְּרָכָה.<br>
+    זוֹהִי נְטִילָה מְיֻחֶדֶת, כְּמוֹ שֶׁהָיוּ עוֹשִׂים בִּזְמַן בֵּית הַמִּקְדָּשׁ.
+  </p>
+  <div class="helper-note">
+    <span class="note-icon">💧</span>
+    <span>כָּאן כֻּלָּם נוֹטְלִים יָדַיִם — בְּלִי לְבָרֵךְ!</span>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 3. KARPAS ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-green animate-on-scroll" id="karpas">
+  <div class="section-header">
+    <span class="section-icon">🥬</span>
+    <h2>כַּרְפַּס <span class="section-transliteration">Karpas — יֶרֶק בְּמֵי מֶלַח</span></h2>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    לוֹקְחִים כַּרְפַּס (יֶרֶק כְּמוֹ סֶלֶרִי אוֹ תַּפּוּחַ אֲדָמָה), טוֹבְלִים בְּמֵי מֶלַח, וּמְבָרְכִים:
+  </p>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָאֲדָמָה.
+    </p>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">😢</span>
+    <span>כָּאן אֶפְשָׁר לְהַסְבִּיר לַיְלָדִים: מֵי הַמֶּלַח מְסַמְּלִים אֶת הַדְּמָעוֹת שֶׁל עַם יִשְׂרָאֵל בְּמִצְרַיִם</span>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 4. YACHATZ ====== -->
+<!-- ===================================================== -->
+<section class="section-card animate-on-scroll" id="yachatz">
+  <div class="section-header">
+    <span class="section-icon">🫓</span>
+    <h2>יַחַץ <span class="section-transliteration">Yachatz — חֲצִיַּת הַמַּצָּה</span></h2>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    לוֹקְחִים אֶת הַמַּצָּה הָאֶמְצָעִית מִתּוֹךְ הַשָּׁלוֹשׁ, וּשׁוֹבְרִים אוֹתָהּ לִשְׁנַיִם.
+    הַחֵלֶק הַגָּדוֹל יוֹתֵר נִשְׁמָר לָאֲפִיקוֹמָן,
+    וְהַחֵלֶק הַקָּטָן חוֹזֵר בֵּין שְׁתֵּי הַמַּצּוֹת.
+  </p>
+  <div class="helper-note">
+    <span class="note-icon">🫣</span>
+    <span>כָּאן מַחְבִּיאִים אֶת הָאֲפִיקוֹמָן — הַיְלָדִים, תִּהְיוּ מוּכָנִים לְחַפֵּשׂ! 🔍</span>
+  </div>
+</section>
+
+<!-- ====== ILLUSTRATION: MATZAH ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/matzah.jpg" alt="מַצּוֹת עֲגֻלּוֹת וּמְרֻבָּעוֹת">
+  <div class="caption">🫓 מַצָּה — לֶחֶם הָעֹנִי 🫓</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====== 5. MAGID ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-burgundy animate-on-scroll" id="magid">
+  <div class="section-header">
+    <span class="section-icon">📖</span>
+    <h2>מַגִּיד <span class="section-transliteration">Magid — סִפּוּר יְצִיאַת מִצְרַיִם</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">📚</span>
+    <span>כָּאן מַתְחִיל הַסִּפּוּר הַגָּדוֹל! כָּאן אֶפְשָׁר לַעֲצוֹר וּלְהַסְבִּיר לַיְלָדִים</span>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    מְגַלִּים אֶת הַמַּצּוֹת, מַגְבִּיהִים אֶת הַקְּעָרָה וְאוֹמְרִים:
+  </p>
+  <div class="blessing">
+    <p class="hagaddah-text large nikud-text">
+      הָא לַחְמָא עַנְיָא דִּי אֲכָלוּ אַבְהָתָנָא בְּאַרְעָא דְמִצְרָיִם.
+      כָּל דִכְפִין יֵיתֵי וְיֵכוּל, כָּל דִצְרִיךְ יֵיתֵי וְיִפְסַח.
+      הָשַּׁתָּא הָכָא, לְשָׁנָה הַבָּאָה בְּאַרְעָא דְיִשְׂרָאֵל.
+      הָשַּׁתָּא עַבְדֵי, לְשָׁנָה הַבָּאָה בְּנֵי חוֹרִין.
+    </p>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">💡</span>
+    <span>כָּאן אֶפְשָׁר לַעֲצוֹר וּלְהַסְבִּיר: זֶה לֶחֶם עֹנִי — הַלֶּחֶם שֶׁל הָעֲנִיִּים שֶׁאָכְלוּ בְּמִצְרַיִם</span>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 6. MA NISHTANA ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-blue animate-on-scroll" id="ma-nishtana">
+  <div class="section-header">
+    <span class="section-icon">❓</span>
+    <h2>מַה נִּשְׁתַּנָּה <span class="section-transliteration">Ma Nishtana — אַרְבַּע הַקֻּשְׁיוֹת</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🗣️</span>
+    <span>כָּאן הַיְלָדִים שׁוֹאֲלִים בְּקוֹל! הַקָּטָן שֶׁבַּמִּשְׁפָּחָה שׁוֹאֵל 🌟</span>
+  </div>
+  <div class="blessing">
+    <p class="hagaddah-text large center nikud-text">
+      מַה נִּשְׁתַּנָּה הַלַּיְלָה הַזֶּה מִכָּל הַלֵּילוֹת?
+    </p>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    <strong>שֶׁבְּכָל הַלֵּילוֹת</strong> אָנוּ אוֹכְלִין חָמֵץ וּמַצָּה,<br>
+    <strong>הַלַּיְלָה הַזֶּה</strong> — כֻּלּוֹ מַצָּה.
+  </p>
+  <p class="hagaddah-text nikud-text">
+    <strong>שֶׁבְּכָל הַלֵּילוֹת</strong> אָנוּ אוֹכְלִין שְׁאָר יְרָקוֹת,<br>
+    <strong>הַלַּיְלָה הַזֶּה</strong> — מָרוֹר.
+  </p>
+  <p class="hagaddah-text nikud-text">
+    <strong>שֶׁבְּכָל הַלֵּילוֹת</strong> אֵין אָנוּ מַטְבִּילִין אֲפִילוּ פַּעַם אֶחָת,<br>
+    <strong>הַלַּיְלָה הַזֶּה</strong> — שְׁתֵּי פְעָמִים.
+  </p>
+  <p class="hagaddah-text nikud-text">
+    <strong>שֶׁבְּכָל הַלֵּילוֹת</strong> אָנוּ אוֹכְלִין בֵּין יוֹשְׁבִין וּבֵין מְסֻבִּין,<br>
+    <strong>הַלַּיְלָה הַזֶּה</strong> — כֻּלָּנוּ מְסֻבִּין.
+  </p>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 7. AVADIM HAYINU ====== -->
+<!-- ===================================================== -->
+<section class="section-card animate-on-scroll" id="avadim">
+  <div class="section-header">
+    <span class="section-icon">⛓️</span>
+    <h2>עֲבָדִים הָיִינוּ <span class="section-transliteration">Avadim Hayinu</span></h2>
+  </div>
+  <p class="hagaddah-text large nikud-text">
+    עֲבָדִים הָיִינוּ לְפַרְעֹה בְּמִצְרָיִם, וַיּוֹצִיאֵנוּ יְיָ אֱלֹהֵינוּ מִשָּׁם בְּיָד חֲזָקָה וּבִזְרוֹעַ נְטוּיָה.
+    וְאִלּוּ לֹא הוֹצִיא הַקָּדוֹשׁ בָּרוּךְ הוּא אֶת אֲבוֹתֵינוּ מִמִּצְרַיִם,
+    הֲרֵי אָנוּ וּבָנֵינוּ וּבְנֵי בָנֵינוּ מְשֻׁעְבָּדִים הָיִינוּ לְפַרְעֹה בְּמִצְרָיִם.
+  </p>
+  <p class="hagaddah-text nikud-text">
+    וַאֲפִילוּ כֻּלָּנוּ חֲכָמִים, כֻּלָּנוּ נְבוֹנִים, כֻּלָּנוּ זְקֵנִים, כֻּלָּנוּ יוֹדְעִים אֶת הַתּוֹרָה —
+    מִצְוָה עָלֵינוּ לְסַפֵּר בִּיצִיאַת מִצְרָיִם.
+    וְכָל הַמַּרְבֶּה לְסַפֵּר בִּיצִיאַת מִצְרָיִם, הֲרֵי זֶה מְשֻׁבָּח.
+  </p>
+</section>
+
+<!-- ====== ILLUSTRATION: MOSES IN BASKET ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/moses-basket.jpg" alt="מֹשֶׁה בַּתֵּבָה עַל שְׂפַת הַיְאוֹר">
+  <div class="caption">👶 מֹשֶׁה בַּתֵּבָה 👶</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====== 8. ARBA BANIM ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-green animate-on-scroll" id="arba-banim">
+  <div class="section-header">
+    <span class="section-icon">👦</span>
+    <h2>אַרְבָּעָה בָנִים <span class="section-transliteration">Arba Banim — אַרְבָּעָה בָנִים</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🎭</span>
+    <span>כָּאן אֶפְשָׁר לַעֲצוֹר וּלְהַסְבִּיר לַיְלָדִים — אֵיזֶה בֵּן אַתָּה הַיּוֹם?</span>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    כְּנֶגֶד אַרְבָּעָה בָנִים דִּבְּרָה תוֹרָה: אֶחָד חָכָם, וְאֶחָד רָשָׁע, וְאֶחָד תָּם, וְאֶחָד שֶׁאֵינוֹ יוֹדֵעַ לִשְׁאוֹל.
+  </p>
+  <div class="four-sons-grid">
+    <div class="son-card">
+      <span class="son-icon">🧒🏒</span>
+      <h3>חָכָם</h3>
+      <p class="nikud-text">מָה הָעֵדוֹת וְהַחֻקִּים וְהַמִּשְׁפָּטִים אֲשֶׁר צִוָּה יְיָ אֱלֹהֵינוּ אֶתְכֶם?</p>
+      <p class="nikud-text"><strong>אַף אַתָּה</strong> אֱמֹר לוֹ כְּהִלְכוֹת הַפֶּסַח: אֵין מַפְטִירִין אַחַר הַפֶּסַח אֲפִיקוֹמָן.</p>
+    </div>
+    <div class="son-card">
+      <span class="son-icon">😤</span>
+      <h3>רָשָׁע</h3>
+      <p class="nikud-text">מָה הָעֲבוֹדָה הַזֹּאת לָכֶם?</p>
+      <p class="nikud-text"><strong>אֱמֹר לוֹ:</strong> בַּעֲבוּר זֶה עָשָׂה יְיָ לִי בְּצֵאתִי מִמִּצְרָיִם — לִי וְלֹא לוֹ.</p>
+    </div>
+    <div class="son-card">
+      <span class="son-icon">😊</span>
+      <h3>תָּם</h3>
+      <p class="nikud-text">מַה זֹּאת?</p>
+      <p class="nikud-text"><strong>אֱמֹר לוֹ:</strong> בְּחֹזֶק יָד הוֹצִיאָנוּ יְיָ מִמִּצְרַיִם, מִבֵּית עֲבָדִים.</p>
+    </div>
+    <div class="son-card">
+      <span class="son-icon">🤷</span>
+      <h3>שֶׁאֵינוֹ יוֹדֵעַ לִשְׁאוֹל</h3>
+      <p class="nikud-text"><strong>אַתְּ פְּתַח לוֹ,</strong> שֶׁנֶּאֱמַר: וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר, בַּעֲבוּר זֶה עָשָׂה יְיָ לִי בְּצֵאתִי מִמִּצְרָיִם.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 9. ESER MAKOT ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-burgundy animate-on-scroll" id="eser-makot">
+  <div class="section-header">
+    <span class="section-icon">💥</span>
+    <h2>עֶשֶׂר הַמַּכּוֹת <span class="section-transliteration">Eser Makot — עֶשֶׂר מַכּוֹת מִצְרַיִם</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🫗</span>
+    <span>כָּאן שׁוֹפְכִים טִפָּה מֵהַכּוֹס עַל כָּל מַכָּה — בְּאֶצְבַּע אוֹ בְּשְׁפִיכָה</span>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    אֵלּוּ עֶשֶׂר מַכּוֹת שֶׁהֵבִיא הַקָּדוֹשׁ בָּרוּךְ הוּא עַל הַמִּצְרִים בְּמִצְרַיִם, וְאֵלּוּ הֵן:
+  </p>
+  <ol class="plague-list">
+    <li class="nikud-text">🩸 דָּם</li>
+    <li class="nikud-text">🐸 צְפַרְדֵּעַ</li>
+    <li class="nikud-text">🦟 כִּנִּים</li>
+    <li class="nikud-text">🐝 עָרוֹב</li>
+    <li class="nikud-text">🐄 דֶּבֶר</li>
+    <li class="nikud-text">🔴 שְׁחִין</li>
+    <li class="nikud-text">🌨️ בָּרָד</li>
+    <li class="nikud-text">🦗 אַרְבֶּה</li>
+    <li class="nikud-text">🌑 חֹשֶׁךְ</li>
+    <li class="nikud-text">💀 מַכַּת בְּכוֹרוֹת</li>
+  </ol>
+</section>
+
+<!-- ====== ILLUSTRATION: TEN PLAGUES ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/ten-plagues.jpg" alt="עֶשֶׂר הַמַּכּוֹת בְּאִיּוּרִים צִבְעוֹנִיִּים">
+  <div class="caption">💥 עֶשֶׂר הַמַּכּוֹת 💥</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====== 10. DAYENU ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-green animate-on-scroll" id="dayenu">
+  <div class="section-header">
+    <span class="section-icon">🎶</span>
+    <h2>דַּיֵּנוּ <span class="section-transliteration">Dayenu — זֶה הָיָה מַסְפִּיק</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🎤</span>
+    <span>כָּאן כֻּלָּם שָׁרִים יַחַד! 🎵</span>
+  </div>
+  <div class="dayenu-block">
+    <p class="dayenu-line nikud-text">אִלּוּ הוֹצִיאָנוּ מִמִּצְרַיִם וְלֹא עָשָׂה בָּהֶם שְׁפָטִים —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ עָשָׂה בָּהֶם שְׁפָטִים וְלֹא עָשָׂה בֵּאלֹהֵיהֶם —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ עָשָׂה בֵּאלֹהֵיהֶם וְלֹא הָרַג אֶת בְּכוֹרֵיהֶם —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ הָרַג אֶת בְּכוֹרֵיהֶם וְלֹא נָתַן לָנוּ אֶת מָמוֹנָם —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ נָתַן לָנוּ אֶת מָמוֹנָם וְלֹא קָרַע לָנוּ אֶת הַיָּם —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ קָרַע לָנוּ אֶת הַיָּם וְלֹא הֶעֱבִירָנוּ בְּתוֹכוֹ בֶּחָרָבָה —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ הֶעֱבִירָנוּ בְּתוֹכוֹ בֶּחָרָבָה וְלֹא שִׁקַּע צָרֵינוּ בְּתוֹכוֹ —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ שִׁקַּע צָרֵינוּ בְּתוֹכוֹ וְלֹא סִפֵּק צָרְכֵּנוּ בַּמִּדְבָּר אַרְבָּעִים שָׁנָה —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ סִפֵּק צָרְכֵּנוּ בַּמִּדְבָּר אַרְבָּעִים שָׁנָה וְלֹא הֶאֱכִילָנוּ אֶת הַמָּן —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ הֶאֱכִילָנוּ אֶת הַמָּן וְלֹא נָתַן לָנוּ אֶת הַשַּׁבָּת —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ נָתַן לָנוּ אֶת הַשַּׁבָּת וְלֹא קֵרְבָנוּ לִפְנֵי הַר סִינַי —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ קֵרְבָנוּ לִפְנֵי הַר סִינַי וְלֹא נָתַן לָנוּ אֶת הַתּוֹרָה —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ נָתַן לָנוּ אֶת הַתּוֹרָה וְלֹא הִכְנִיסָנוּ לְאֶרֶץ יִשְׂרָאֵל —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+
+    <p class="dayenu-line nikud-text">אִלּוּ הִכְנִיסָנוּ לְאֶרֶץ יִשְׂרָאֵל וְלֹא בָנָה לָנוּ אֶת בֵּית הַבְּחִירָה —</p>
+    <p class="dayenu-refrain nikud-text">דַּיֵּנוּ!</p>
+  </div>
+</section>
+
+<!-- ====== ILLUSTRATION: SPLITTING THE SEA ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/splitting-sea.jpg" alt="קְרִיעַת יַם סוּף — הַמַּיִם נֶחֱלָקִים לִשְׁנַיִם">
+  <div class="caption">🌊 קְרִיעַת יַם סוּף 🌊</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====== 11. RACHTZAH ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-blue animate-on-scroll" id="rachtzah">
+  <div class="section-header">
+    <span class="section-icon">🫧</span>
+    <h2>רָחְצָה <span class="section-transliteration">Rachtzah — נְטִילַת יָדַיִם לַסְּעוּדָה</span></h2>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    נוֹטְלִים יָדַיִם לַסְּעוּדָה וּמְבָרְכִים:
+  </p>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדָיִם.
+    </p>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 12. MOTZI MATZAH ====== -->
+<!-- ===================================================== -->
+<section class="section-card animate-on-scroll" id="motzi-matzah">
+  <div class="section-header">
+    <span class="section-icon">🫓</span>
+    <h2>מוֹצִיא מַצָּה <span class="section-transliteration">Motzi Matzah</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🙌</span>
+    <span>כָּאן מְבָרְכִים וְאוֹכְלִים מַצָּה! 🫓</span>
+  </div>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ.
+    </p>
+  </div>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל אֲכִילַת מַצָּה.
+    </p>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 13. MAROR ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-green animate-on-scroll" id="maror">
+  <div class="section-header">
+    <span class="section-icon">🥬</span>
+    <h2>מָרוֹר <span class="section-transliteration">Maror — הַיֶּרֶק הַמָּר</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">😮</span>
+    <span>כָּאן אֶפְשָׁר לַעֲצוֹר וּלְהַסְבִּיר: הַמָּרוֹר מְסַמֵּל אֶת הַמְּרִירוּת שֶׁל הָעַבְדוּת</span>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    לוֹקְחִים מָרוֹר, טוֹבְלִים בַּחֲרֹסֶת, וּמְבָרְכִים:
+  </p>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל אֲכִילַת מָרוֹר.
+    </p>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 14. KORECH ====== -->
+<!-- ===================================================== -->
+<section class="section-card animate-on-scroll" id="korech">
+  <div class="section-header">
+    <span class="section-icon">🥪</span>
+    <h2>כּוֹרֵךְ <span class="section-transliteration">Korech — כְּרִיכָה</span></h2>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    כּוֹרְכִים מַצָּה וּמָרוֹר יַחַד וְאוֹכְלִים — זֵכֶר לְהִלֵּל הַזָּקֵן,
+    שֶׁהָיָה כּוֹרֵךְ פֶּסַח, מַצָּה וּמָרוֹר וְאוֹכֵל בְּבַת אַחַת.
+  </p>
+  <div class="helper-note">
+    <span class="note-icon">🫓</span>
+    <span>עוֹשִׂים "כָּרִיךְ" — מַצָּה עִם מָרוֹר וְחֲרֹסֶת, כְּמוֹ סֶנְדְּוִיץ׳ קָטָן!</span>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 15. SHULCHAN ORECH ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-burgundy animate-on-scroll" id="shulchan-orech">
+  <div class="section-header">
+    <span class="section-icon">🍽️</span>
+    <h2>שֻׁלְחָן עוֹרֵךְ <span class="section-transliteration">Shulchan Orech — הַסְּעוּדָה</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🥳</span>
+    <span>סוֹף סוֹף! כָּאן אוֹכְלִים אֶת אֲרוּחַת הַחָג! בְּתֵאָבוֹן! 🍗🥗</span>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    עַכְשָׁו אוֹכְלִים אֶת סְעוּדַת הַחָג!<br>
+    נוֹהֲגִים לֶאֱכוֹל בֵּיצָה קָשָׁה בְּמֵי מֶלַח, וּלְהַמְשִׁיךְ עִם סְעוּדָה חֲגִיגִית.
+  </p>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 16. TZAFUN ====== -->
+<!-- ===================================================== -->
+<section class="section-card animate-on-scroll" id="tzafun">
+  <div class="section-header">
+    <span class="section-icon">🔍</span>
+    <h2>צָפוּן <span class="section-transliteration">Tzafun — אֲכִילַת הָאֲפִיקוֹמָן</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🎉</span>
+    <span>יְלָדִים — הִגִּיעַ הַזְּמַן לְחַפֵּשׂ אֶת הָאֲפִיקוֹמָן! מִי מוֹצֵא רִאשׁוֹן? 🔎</span>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    אוֹכְלִים אֶת הָאֲפִיקוֹמָן — חֲתִיכַת הַמַּצָּה שֶׁהֻחְבְּאָה בְּ"יַחַץ".
+    זֶה הַדָּבָר הָאַחֲרוֹן שֶׁאוֹכְלִים הַלַּיְלָה — כְּדֵי שֶׁטַּעַם הַמַּצָּה יִישָׁאֵר בַּפֶּה.
+  </p>
+</section>
+
+<!-- ====== ILLUSTRATION: AFIKOMAN ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/afikoman.jpg" alt="יְלָדִים מְחַפְּשִׂים אֶת הָאֲפִיקוֹמָן">
+  <div class="caption">🔍 חִפּוּשׂ אֲפִיקוֹמָן 🔍</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====== 17. BARECH ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-blue animate-on-scroll" id="barech">
+  <div class="section-header">
+    <span class="section-icon">🙏</span>
+    <h2>בָּרֵךְ <span class="section-transliteration">Barech — בִּרְכַּת הַמָּזוֹן</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🍷</span>
+    <span>כָּאן מוֹזְגִים כּוֹס שְׁלִישִׁית! וְגַם כּוֹס שֶׁל אֵלִיָּהוּ הַנָּבִיא 🍷</span>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    מוֹזְגִים כּוֹס שְׁלִישִׁית, וּמְבָרְכִים בִּרְכַּת הַמָּזוֹן.
+  </p>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ,
+      בְּחֵן בְּחֶסֶד וּבְרַחֲמִים. הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר, כִּי לְעוֹלָם חַסְדּוֹ.
+      וּבְטוּבוֹ הַגָּדוֹל תָּמִיד לֹא חָסַר לָנוּ, וְאַל יֶחְסַר לָנוּ מָזוֹן לְעוֹלָם וָעֶד.
+      בַּעֲבוּר שְׁמוֹ הַגָּדוֹל, כִּי הוּא אֵל זָן וּמְפַרְנֵס לַכֹּל, וּמֵטִיב לַכֹּל,
+      וּמֵכִין מָזוֹן לְכָל בְּרִיּוֹתָיו אֲשֶׁר בָּרָא.
+      בָּרוּךְ אַתָּה יְיָ, הַזָּן אֶת הַכֹּל.
+    </p>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    שׁוֹתִים אֶת הַכּוֹס הַשְּׁלִישִׁית בְּהַסָּבָה לִשְׂמֹאל.
+  </p>
+  <p class="hagaddah-text nikud-text">
+    פּוֹתְחִים אֶת הַדֶּלֶת לְאֵלִיָּהוּ הַנָּבִיא וְאוֹמְרִים:
+  </p>
+  <div class="blessing">
+    <p class="hagaddah-text large nikud-text">
+      שְׁפֹךְ חֲמָתְךָ אֶל הַגּוֹיִם אֲשֶׁר לֹא יְדָעוּךָ,
+      וְעַל מַמְלָכוֹת אֲשֶׁר בְּשִׁמְךָ לֹא קָרָאוּ.
+    </p>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🚪</span>
+    <span>כָּאן פּוֹתְחִים אֶת הַדֶּלֶת! אוּלַי אֵלִיָּהוּ הַנָּבִיא יִכָּנֵס? 👀</span>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== 18. HALLEL ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-green animate-on-scroll" id="hallel">
+  <div class="section-header">
+    <span class="section-icon">🎵</span>
+    <h2>הַלֵּל <span class="section-transliteration">Hallel — שִׁירֵי הַלֵּל</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🎶</span>
+    <span>כָּאן כֻּלָּם שָׁרִים יַחַד שִׁירֵי הוֹדָיָה! 🎤</span>
+  </div>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      הַלְלוּיָהּ!<br>
+      הַלְלוּ עַבְדֵי יְיָ, הַלְלוּ אֶת שֵׁם יְיָ.<br>
+      יְהִי שֵׁם יְיָ מְבוֹרָךְ מֵעַתָּה וְעַד עוֹלָם.<br>
+      מִמִּזְרַח שֶׁמֶשׁ עַד מְבוֹאוֹ מְהֻלָּל שֵׁם יְיָ.<br>
+      רָם עַל כָּל גּוֹיִם יְיָ, עַל הַשָּׁמַיִם כְּבוֹדוֹ.
+    </p>
+  </div>
+  <div class="blessing">
+    <p class="hagaddah-text nikud-text">
+      לֹא לָנוּ יְיָ לֹא לָנוּ, כִּי לְשִׁמְךָ תֵּן כָּבוֹד, עַל חַסְדְּךָ עַל אֲמִתֶּךָ.
+    </p>
+  </div>
+  <p class="hagaddah-text nikud-text">
+    מוֹזְגִים כּוֹס רְבִיעִית וְשׁוֹתִים בְּהַסָּבָה.
+  </p>
+  <div class="helper-note">
+    <span class="note-icon">🍷</span>
+    <span>כָּאן אֶפְשָׁר לְהָרִים אֶת הַכּוֹס! כּוֹס רְבִיעִית — הַכּוֹס הָאַחֲרוֹנָה! 🍷</span>
+  </div>
+</section>
+
+<!-- ====== ILLUSTRATION: EXODUS ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/exodus.jpg" alt="יְצִיאַת מִצְרַיִם — עַם יִשְׂרָאֵל יוֹצֵא לַחֵרוּת">
+  <div class="caption">🏔️ יְצִיאַת מִצְרַיִם 🏔️</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====== 19. NIRTZAH ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-burgundy animate-on-scroll" id="nirtzah">
+  <div class="section-header">
+    <span class="section-icon">✨</span>
+    <h2>נִרְצָה <span class="section-transliteration">Nirtzah — סִיּוּם הַסֵּדֶר</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🌟</span>
+    <span>סִיַּמְנוּ אֶת הַסֵּדֶר! כֻּלָּם אוֹמְרִים יַחַד:</span>
+  </div>
+  <div class="blessing">
+    <p class="hagaddah-text large center nikud-text">
+      חֲסַל סִדּוּר פֶּסַח כְּהִלְכָתוֹ,
+      כְּכָל מִשְׁפָּטוֹ וְחֻקָּתוֹ.
+      כַּאֲשֶׁר זָכִינוּ לְסַדֵּר אוֹתוֹ,
+      כֵּן נִזְכֶּה לַעֲשׂוֹתוֹ.
+    </p>
+  </div>
+  <p class="hagaddah-text large center nikud-text" style="margin-top: 20px;">
+    <strong>🏛️ לְשָׁנָה הַבָּאָה בִּירוּשָׁלָיִם הַבְּנוּיָה! 🏛️</strong>
+  </p>
+</section>
+
+<!-- ===================================================== -->
+<!-- ====== ECHAD MI YODEA ====== -->
+<!-- ===================================================== -->
+<section class="section-card highlight-blue animate-on-scroll" id="echad-mi-yodea">
+  <div class="section-header">
+    <span class="section-icon">🎵</span>
+    <h2>אֶחָד מִי יוֹדֵעַ <span class="section-transliteration">Echad Mi Yodea</span></h2>
+  </div>
+  <div class="helper-note">
+    <span class="note-icon">🎤</span>
+    <span>כָּאן כֻּלָּם שָׁרִים יַחַד! מִי יָכוֹל הֲכִי מַהֵר? 🏃</span>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">א</span>
+    <p class="hagaddah-text center nikud-text">
+      אֶחָד מִי יוֹדֵעַ? אֶחָד אֲנִי יוֹדֵעַ!<br>
+      <strong>אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.</strong>
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">ב</span>
+    <p class="hagaddah-text center nikud-text">
+      שְׁנַיִם מִי יוֹדֵעַ? שְׁנַיִם אֲנִי יוֹדֵעַ!<br>
+      <strong>שְׁנֵי לוּחוֹת הַבְּרִית,</strong><br>
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">ג</span>
+    <p class="hagaddah-text center nikud-text">
+      שְׁלוֹשָׁה מִי יוֹדֵעַ? שְׁלוֹשָׁה אֲנִי יוֹדֵעַ!<br>
+      <strong>שְׁלוֹשָׁה אָבוֹת,</strong><br>
+      שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">ד</span>
+    <p class="hagaddah-text center nikud-text">
+      אַרְבַּע מִי יוֹדֵעַ? אַרְבַּע אֲנִי יוֹדֵעַ!<br>
+      <strong>אַרְבַּע אִמָּהוֹת,</strong><br>
+      שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">ה</span>
+    <p class="hagaddah-text center nikud-text">
+      חֲמִשָּׁה מִי יוֹדֵעַ? חֲמִשָּׁה אֲנִי יוֹדֵעַ!<br>
+      <strong>חֲמִשָּׁה חוּמְשֵׁי תוֹרָה,</strong><br>
+      אַרְבַּע אִמָּהוֹת, שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">ו</span>
+    <p class="hagaddah-text center nikud-text">
+      שִׁשָּׁה מִי יוֹדֵעַ? שִׁשָּׁה אֲנִי יוֹדֵעַ!<br>
+      <strong>שִׁשָּׁה סִדְרֵי מִשְׁנָה,</strong><br>
+      חֲמִשָּׁה חוּמְשֵׁי תוֹרָה, אַרְבַּע אִמָּהוֹת, שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">ז</span>
+    <p class="hagaddah-text center nikud-text">
+      שִׁבְעָה מִי יוֹדֵעַ? שִׁבְעָה אֲנִי יוֹדֵעַ!<br>
+      <strong>שִׁבְעָה יְמֵי שַׁבָּתָא,</strong><br>
+      שִׁשָּׁה סִדְרֵי מִשְׁנָה, חֲמִשָּׁה חוּמְשֵׁי תוֹרָה, אַרְבַּע אִמָּהוֹת, שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">ח</span>
+    <p class="hagaddah-text center nikud-text">
+      שְׁמוֹנָה מִי יוֹדֵעַ? שְׁמוֹנָה אֲנִי יוֹדֵעַ!<br>
+      <strong>שְׁמוֹנָה יְמֵי מִילָה,</strong><br>
+      שִׁבְעָה יְמֵי שַׁבָּתָא, שִׁשָּׁה סִדְרֵי מִשְׁנָה, חֲמִשָּׁה חוּמְשֵׁי תוֹרָה, אַרְבַּע אִמָּהוֹת, שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">ט</span>
+    <p class="hagaddah-text center nikud-text">
+      תִּשְׁעָה מִי יוֹדֵעַ? תִּשְׁעָה אֲנִי יוֹדֵעַ!<br>
+      <strong>תִּשְׁעָה יַרְחֵי לֵידָה,</strong><br>
+      שְׁמוֹנָה יְמֵי מִילָה, שִׁבְעָה יְמֵי שַׁבָּתָא, שִׁשָּׁה סִדְרֵי מִשְׁנָה, חֲמִשָּׁה חוּמְשֵׁי תוֹרָה, אַרְבַּע אִמָּהוֹת, שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">י</span>
+    <p class="hagaddah-text center nikud-text">
+      עֲשָׂרָה מִי יוֹדֵעַ? עֲשָׂרָה אֲנִי יוֹדֵעַ!<br>
+      <strong>עֲשָׂרָה דִבְּרַיָּא,</strong><br>
+      תִּשְׁעָה יַרְחֵי לֵידָה, שְׁמוֹנָה יְמֵי מִילָה, שִׁבְעָה יְמֵי שַׁבָּתָא, שִׁשָּׁה סִדְרֵי מִשְׁנָה, חֲמִשָּׁה חוּמְשֵׁי תוֹרָה, אַרְבַּע אִמָּהוֹת, שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">יא</span>
+    <p class="hagaddah-text center nikud-text">
+      אַחַד עָשָׂר מִי יוֹדֵעַ? אַחַד עָשָׂר אֲנִי יוֹדֵעַ!<br>
+      <strong>אַחַד עָשָׂר כּוֹכְבַיָּא,</strong><br>
+      עֲשָׂרָה דִבְּרַיָּא, תִּשְׁעָה יַרְחֵי לֵידָה, שְׁמוֹנָה יְמֵי מִילָה, שִׁבְעָה יְמֵי שַׁבָּתָא, שִׁשָּׁה סִדְרֵי מִשְׁנָה, חֲמִשָּׁה חוּמְשֵׁי תוֹרָה, אַרְבַּע אִמָּהוֹת, שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">יב</span>
+    <p class="hagaddah-text center nikud-text">
+      שְׁנֵים עָשָׂר מִי יוֹדֵעַ? שְׁנֵים עָשָׂר אֲנִי יוֹדֵעַ!<br>
+      <strong>שְׁנֵים עָשָׂר שִׁבְטַיָּא,</strong><br>
+      אַחַד עָשָׂר כּוֹכְבַיָּא, עֲשָׂרָה דִבְּרַיָּא, תִּשְׁעָה יַרְחֵי לֵידָה, שְׁמוֹנָה יְמֵי מִילָה, שִׁבְעָה יְמֵי שַׁבָּתָא, שִׁשָּׁה סִדְרֵי מִשְׁנָה, חֲמִשָּׁה חוּמְשֵׁי תוֹרָה, אַרְבַּע אִמָּהוֹת, שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+
+  <div class="echad-block">
+    <span class="echad-num">יג</span>
+    <p class="hagaddah-text center nikud-text">
+      שְׁלוֹשָׁה עָשָׂר מִי יוֹדֵעַ? שְׁלוֹשָׁה עָשָׂר אֲנִי יוֹדֵעַ!<br>
+      <strong>שְׁלוֹשָׁה עָשָׂר מִדַּיָּא,</strong><br>
+      שְׁנֵים עָשָׂר שִׁבְטַיָּא, אַחַד עָשָׂר כּוֹכְבַיָּא, עֲשָׂרָה דִבְּרַיָּא, תִּשְׁעָה יַרְחֵי לֵידָה, שְׁמוֹנָה יְמֵי מִילָה, שִׁבְעָה יְמֵי שַׁבָּתָא, שִׁשָּׁה סִדְרֵי מִשְׁנָה, חֲמִשָּׁה חוּמְשֵׁי תוֹרָה, אַרְבַּע אִמָּהוֹת, שְׁלוֹשָׁה אָבוֹת, שְׁנֵי לוּחוֹת הַבְּרִית,
+      אֶחָד אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם וּבָאָרֶץ.
+    </p>
+  </div>
+</section>
+
+<!-- ====== ILLUSTRATION: ECHAD MI YODEA ====== -->
+<div class="illustration-card animate-on-scroll">
+  <img src="images/echad-mi-yodea.jpg" alt="אִיּוּר צִבְעוֹנִי שֶׁל אֶחָד מִי יוֹדֵעַ">
+  <div class="caption">🎵 אֶחָד מִי יוֹדֵעַ 🎵</div>
+</div>
+
+<!-- ====== CLOSING ====== -->
+<section class="section-card animate-on-scroll" style="text-align:center;">
+  <div class="section-header" style="justify-content:center;">
+    <span class="section-icon">🌸</span>
+    <h2>סִיּוּם <span class="section-transliteration">ליל הסדר הסתיים</span></h2>
+  </div>
+  <p class="hagaddah-text large center nikud-text">
+    <strong>לְשָׁנָה הַבָּאָה בִּירוּשָׁלָיִם!</strong>
+  </p>
+  <p class="hagaddah-text center nikud-text">
+    חַג פֶּסַח כָּשֵׁר וְשָׂמֵחַ לְכָל הַמִּשְׁפָּחָה! 🌷<br>
+    שֶׁיִּהְיֶה לֵיל סֵדֶר מָלֵא שִׂמְחָה, אַהֲבָה וְחֵרוּת.
+  </p>
+  <div class="title-ornament">🍷 ✡ 🌿 ✡ 🍷</div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="footer-ornament">✡ 🍷 🫓 🌿 ✡</div>
+  <p>הַגָּדָה שֶׁל פֶּסַח — לֵיל סֵדֶר מִשְׁפַּחְתִּי</p>
+  <p>חַג הַפֶּסַח תשפ״ו — 2026</p>
+  <p style="margin-top:8px; font-size:0.85em;">נִבְנָה בְּאַהֲבָה לְמִשְׁפָּחָה 💛</p>
+</footer>
+
+</div><!-- end container -->
+
+<!-- ====== JAVASCRIPT ====== -->
+<script>
+(function() {
+  'use strict';
+
+  // --- Font Size Controls ---
+  var baseFontSize = 22;
+  var currentFontSize = baseFontSize;
+  var minFont = 14;
+  var maxFont = 40;
+
+  function changeFontSize(delta) {
+    currentFontSize = Math.min(maxFont, Math.max(minFont, currentFontSize + delta));
+    document.body.style.fontSize = currentFontSize + 'px';
+  }
+  window.changeFontSize = changeFontSize;
+
+  function resetFontSize() {
+    currentFontSize = baseFontSize;
+    document.body.style.fontSize = baseFontSize + 'px';
+  }
+  window.resetFontSize = resetFontSize;
+
+  // --- Dark Mode ---
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle('dark-mode');
+    var btn = document.getElementById('darkModeBtn');
+    if (document.documentElement.classList.contains('dark-mode')) {
+      btn.textContent = '☀️';
+    } else {
+      btn.textContent = '🌙';
+    }
+  }
+  window.toggleDarkMode = toggleDarkMode;
+
+  // --- Scroll animations ---
+  function handleScrollAnimations() {
+    var elements = document.querySelectorAll('.animate-on-scroll');
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        el.classList.add('visible');
+      }
+    }
+  }
+
+  // --- Back to top ---
+  function handleBackToTop() {
+    var btn = document.getElementById('backToTop');
+    if (window.scrollY > 400) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  }
+
+  var scrollTimeout;
+  window.addEventListener('scroll', function() {
+    if (scrollTimeout) return;
+    scrollTimeout = setTimeout(function() {
+      scrollTimeout = null;
+      handleScrollAnimations();
+      handleBackToTop();
+    }, 60);
+  }, { passive: true });
+
+  // Initial check
+  handleScrollAnimations();
+})();
+</script>
+
+</body>
+</html>
